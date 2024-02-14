@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+    animation: heartBackground 20s linear infinite;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: red;
+  }
+  
+  #generateButton {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #loveLetter {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: red;
+    display: none; /* Initially hide the love letter container */
+  }
+  
+  @keyframes heartBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Love emoji animation */
+  .emoji {
+    position: absolute;
+    opacity: 0;
+    font-size: 30px;
+    animation: emojiAnimation 10s linear infinite;
+  }
+  
+  @keyframes emojiAnimation {
+    0% {
+      opacity: 1;
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-100px) translateX(100px) rotate(180deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-200px) translateX(-100px) rotate(360deg);
+    }
+  }
+  
+  /* Media Queries for Mobile Responsive Design */
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    #generateButton {
+      font-size: 0.8em;
+    }
+  
+    #loveLetter {
+      font-size: 1em;
+    }
+  }
+  
